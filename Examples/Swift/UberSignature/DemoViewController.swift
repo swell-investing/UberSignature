@@ -33,9 +33,9 @@ class DemoViewController: UIViewController, SignatureDrawingViewControllerDelega
         view.backgroundColor = UIColor.white
         
         signatureViewController.delegate = self
-        addChildViewController(signatureViewController)
+        addChild(signatureViewController)
         view.addSubview(signatureViewController.view)
-        signatureViewController.didMove(toParentViewController: self)
+        signatureViewController.didMove(toParent: self)
         
         resetButton.addTarget(self, action: #selector(resetTapped), for: .touchUpInside)
         view.addSubview(resetButton)
